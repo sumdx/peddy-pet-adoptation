@@ -1,162 +1,229 @@
 <!DOCTYPE html>
-<html lang="en" >
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- Daisy UI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.13/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        .button-style-active{
-            border: #0E7A81;
-            border-radius: 20px;
-        }
-        .button-style:hover{
-            cursor: pointer;
-            
-        }
-        .button-style:active{
-            background-color: red;
-        }
+      .button-style-active {
+        border: #0e7a81;
+        border-radius: 20px;
+      }
+      .button-style:hover {
+        cursor: pointer;
+      }
+      .button-style:active {
+        background-color: red;
+      }
     </style>
     <title>Peddy</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <!-- navbar -->
-        <nav class="container mx-auto">
-            <div class="navbar bg-base-100">
-                <div class="navbar-start">
-                  <div class="dropdown">
-                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-5 w-5"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor">
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M4 6h16M4 12h8m-8 6h16" />
-                      </svg>
-                    </div>
-                    <ul
-                      tabindex="0"
-                      class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
-                      <li><a>
-                        Home
-                      </a>
-                    </li>
-                        <li>
-                        Shop
-                    </li>
-                    <li>
-                        Contact
-                    </li>
-                    </ul>
-                  </div>
-                  <img src="./images/logo.webp" alt="">
-                  <a class="font-bold text-xl">Peddy</a>
-                </div>
-                <div class="navbar-center hidden lg:flex">
-                  <ul class="menu menu-horizontal px-1 flex gap-5">
-                    <li>
-                        Home
-                    </li>
-                    <li>
-                        Shop
-                    </li>
-                    <li>
-                        Contact
-                    </li>
-                  </ul>
-                </div>
-                <div class="navbar-end">
-                  <a class="btn">Button</a>
-                </div>
+      <!-- navbar -->
+      <nav class="container mx-auto">
+        <div class="navbar bg-base-100">
+          <div class="navbar-start">
+            <div class="dropdown">
+              <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  class="h-5 w-5"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M4 6h16M4 12h8m-8 6h16"
+                  />
+                </svg>
               </div>
-        </nav>
-        <!-- Banner -->
-        <section class="flex justify-center flex-col text-center items-center mt-10">
-            <h4 class="text-slate-500">Bringing Families Together ❤️‍🔥 </h4>
-            <h1 class="w-2/5 text-5xl font-black mt-5">Your Path to Adoption Starts Here</h1>
-            <p class="w-3/5 mt-5">
-                Find your perfect companion and give a pet a loving home! Our adoption platform connects you with pets waiting for a second chance. Browse through our available pets and start your journey toward a lifelong bond full of joy, love, and happiness.
-            </p>
-            <a href ="#shop-div" style="scroll-behavior:smooth;"><button class="btn bg-cyan-800 text-white mt-10 mb-10"  >View More</button></a>
-            <img class="w-2/5" src="./images/pet.webp" alt="">
-        </section>
+              <ul
+                tabindex="0"
+                class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li><a> Home </a></li>
+                <li>Shop</li>
+                <li>Contact</li>
+              </ul>
+            </div>
+            <img src="./images/logo.webp" alt="" />
+            <a class="font-bold text-xl">Peddy</a>
+          </div>
+          <div class="navbar-center hidden lg:flex">
+            <ul class="menu menu-horizontal px-1 flex gap-5">
+              <li>Home</li>
+              <li>Shop</li>
+              <li>Contact</li>
+            </ul>
+          </div>
+          <div class="navbar-end">
+            <a class="btn">Button</a>
+          </div>
+        </div>
+      </nav>
+      <!-- Banner -->
+      <section
+        class="flex justify-center flex-col text-center items-center mt-10"
+      >
+        <h4 class="text-slate-500">Bringing Families Together ❤️‍🔥</h4>
+        <h1 class="w-2/5 text-5xl font-black mt-5">
+          Your Path to Adoption Starts Here
+        </h1>
+        <p class="w-3/5 mt-5">
+          Find your perfect companion and give a pet a loving home! Our adoption
+          platform connects you with pets waiting for a second chance. Browse
+          through our available pets and start your journey toward a lifelong
+          bond full of joy, love, and happiness.
+        </p>
+        <a href="#shop-div" style="scroll-behavior: smooth"
+          ><button class="btn bg-cyan-800 text-white mt-10 mb-10">
+            View More
+          </button></a
+        >
+        <img class="w-2/5" src="./images/pet.webp" alt="" />
+      </section>
     </header>
     <main class="mt-12 container mx-auto">
-        <!-- title -->
-        <div class="flex flex-col items-center justify-center ">
-            <h2 class="text-4xl font-extrabold text-center">Adopt  Your  Best Friend</h2>
-            <p class="w-1/2 text-center mt-5">It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a.</p>
+      <!-- title -->
+      <div class="flex flex-col items-center justify-center">
+        <h2 class="text-4xl font-extrabold text-center">
+          Adopt Your Best Friend
+        </h2>
+        <p class="w-1/2 text-center mt-5">
+          It is a long established fact that a reader will be distracted by the
+          readable content of a page when looking at its layout. The point of
+          using Lorem Ipsum is that it has a.
+        </p>
+      </div>
+      <!-- Catagories -->
+      <div id="catagory-container" class="mt-5 flex justify-between"></div>
 
+      <!-- Deals -->
+      <div class="flex justify-between items-center">
+        <p class="text-lg font-bold">Best deals for you</p>
+        <button class="btn bg-cyan-800 text-white mt-10 mb-10">
+          Sort by price
+        </button>
+      </div>
+      <!-- Main Card container -->
+      <div id="shop-div" class="flex gap-4">
+        <!-- left card container -->
+        <div
+          id="post-container"
+          class="w-3/4 grid grid-cols-3 border p-7 gap-5"
+        ></div>
+        <!-- right card container -->
+        <div class="w-1/4 p-7 border gap-2">
+          <div id="like-container" class="grid grid-cols-2 gap-2"></div>
         </div>
-        <!-- Catagories -->
-        <div id="catagory-container" class="mt-5 flex justify-between">
-            
-        </div>
-    
-        <!-- Deals -->
-        <div class="flex justify-between items-center">
-            <p class="text-lg font-bold">Best deals for you</p>
-            <button  class="btn bg-cyan-800 text-white mt-10 mb-10">Sort by price</button>
-        </div>
-        <!-- Main Card container -->
-        <div id="shop-div" class="flex gap-4">
-            <!-- left card container -->
-            <div id="post-container" class="w-3/4 grid grid-cols-3 border p-7 gap-5">
-                
+      </div>
+      <section>
+        <button class="btn" onclick="my_modal_4.showModal()">open modal</button>
+        <dialog id="my_modal_4" class="modal">
+          <div class="modal-box w-11/12 max-w-5xl">
+            <div class="flex flex-col">
+              <img
+                src="https://i.ibb.co.com/p0w744T/pet-1.jpg"
+                class="w-full"
+                alt=""
+              />
+              <h1 class="text-xl font-bold">Name</h1>
+              <!-- details -->
+              <div class="px-5 flex gap-2">
+                <div>
+                  <div class="flex flex-row gap-2">
+                    <img src="./images/Frame.png" alt="" />
+                    <p class="text-gray-500">Breed : ${post.breed}</p>
+                  </div>
+                </div>
+                <div>
+                    
+                </div>
+                <div class="flex flex-row gap-2">
+                  <img src="./images/date.png" alt="" />
+                  <p class="text-gray-500">Birth : ${post.date_of_birth}</p>
+                </div>
+                <div class="flex flex-row gap-2">
+                  <img src="./images/Frame (3).png" alt="" />
+                  <p class="text-gray-500">Gender : ${post.gender}</p>
+                </div>
+                <div class="flex flex-row gap-2">
+                  <img src="./images/price.png" alt="" />
+                  <p class="text-gray-500">Price : ${post.price}</p>
+                </div>
+                <hr class="mt-4" />
+              </div>
             </div>
-            <!-- right card container -->
-            <div id="like-container" class="w-1/4 grid grid-cols-2 p-7 border gap-2">
-                
+            <p class="py-4">Click the button below to close</p>
+
+            <div class="modal-action">
+              <form method="dialog">
+                <!-- if there is a button, it will close the modal -->
+                <button class="btn">Close</button>
+              </form>
             </div>
-        </div>
+          </div>
+        </dialog>
+      </section>
     </main>
     <footer class="bg-neutral-900 mt-10">
-        <div class="footer text-neutral-content container mx-auto py-10">
-            <nav>
-                <div class="flex gap-5">
-                    <img src="./images/logo.webp" alt="">
-                    <a class="font-bold text-xl">Peddy</a>
-                </div>
-                <a class="link link-hover mt-7">Location: av. Washington 165, NY CA</a>
-                <a class="link link-hover">54003</a>
-                <a class="link link-hover">Phone: +31 85 964 47 25</a>
-                <a class="link link-hover">Email: info@yourdomain.com</a>
-                <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
-                <div class="flex gap-5 mt-2">
-                    <img src="./images/facebook.png" alt="">
-                    <img src="./images/x.png" alt="">
-                    <img src="./images/instagram.png" alt="">
-                    <img src="./images/youtube.png" alt="">
-                </div>
-              </nav>
-              <nav>
-                <h6 class="text-lg font-bold text-white">Useful Links</h6>
-                <a class="link link-hover mt-7">Home</a>
-                <a class="link link-hover ">About us</a>
-                <a class="link link-hover">Animals</a>
-                <a class="link link-hover">Foundation</a>
-                <a class="link link-hover">Contact Us</a>
-              </nav>
-              <nav>
-                <h6 class="text-lg font-bold text-white">Drop a Message</h6>
-                <div class="flex flex-col mt-7">
-                    <input type="email" placeholder="Enter your email" class="input bg-neutral-600 input-bordered w-full max-w-xs" />
-                    <button class="btn text-white border-none bg-cyan-800 text-center mt-4">Subscribe</button>
-                </div>
-              </nav>
-        </div>
-        
+      <div class="footer text-neutral-content container mx-auto py-10">
+        <nav>
+          <div class="flex gap-5">
+            <img src="./images/logo.webp" alt="" />
+            <a class="font-bold text-xl">Peddy</a>
+          </div>
+          <a class="link link-hover mt-7"
+            >Location: av. Washington 165, NY CA</a
+          >
+          <a class="link link-hover">54003</a>
+          <a class="link link-hover">Phone: +31 85 964 47 25</a>
+          <a class="link link-hover">Email: info@yourdomain.com</a>
+          <a class="link link-hover">Openings hours: 9.00 AM - 5.00 PM</a>
+          <div class="flex gap-5 mt-2">
+            <img src="./images/facebook.png" alt="" />
+            <img src="./images/x.png" alt="" />
+            <img src="./images/instagram.png" alt="" />
+            <img src="./images/youtube.png" alt="" />
+          </div>
+        </nav>
+        <nav>
+          <h6 class="text-lg font-bold text-white">Useful Links</h6>
+          <a class="link link-hover mt-7">Home</a>
+          <a class="link link-hover">About us</a>
+          <a class="link link-hover">Animals</a>
+          <a class="link link-hover">Foundation</a>
+          <a class="link link-hover">Contact Us</a>
+        </nav>
+        <nav>
+          <h6 class="text-lg font-bold text-white">Drop a Message</h6>
+          <div class="flex flex-col mt-7">
+            <input
+              type="email"
+              placeholder="Enter your email"
+              class="input bg-neutral-600 input-bordered w-full max-w-xs"
+            />
+            <button
+              class="btn text-white border-none bg-cyan-800 text-center mt-4"
+            >
+              Subscribe
+            </button>
+          </div>
+        </nav>
+      </div>
     </footer>
 
     <!-- JS FILE CONNECT -->
-     <script src="./script/index.js"></script>
-</body>
+    <script src="./script/index.js"></script>
+  </body>
 </html>

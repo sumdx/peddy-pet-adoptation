@@ -41,6 +41,7 @@ const likePostUpdate =(image)=>{
     const likeContainer = document.getElementById("like-container");
     const likeImage = document.createElement('img');
     likeImage.src = image;
+    likeImage.classList.add("rounded-md");
     likeContainer.append(likeImage);
 }
 
@@ -76,6 +77,10 @@ const loadAllPost =async()=>{
         console.log("error : " + err)
     }
 
+}
+
+const openDetailsModal = (data) =>{
+    
 }
 
 // Display all post
@@ -135,9 +140,10 @@ const displayAllPost =(pets) =>{
                         <div class="flex flex-row justify-between px-5 py-5">
                             <button id="btn-like" onclick="likePostUpdate('${post.image}')" class="btn "><img src="./images/Frame 1171276315.png" alt=""></button>
                             <button class="btn text-cyan-800">Adopt</button>
-                            <button class="btn text-cyan-800">Details</button>
+                            <button class="btn text-cyan-800" onclick="openDetailsModal('${post.petId}')">Details</button>
                         </div>
             `
+            
             postContainer.append(postDiv);
         }
     }
