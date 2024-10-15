@@ -11,6 +11,7 @@ const loadCatagories = async() => {
 
 }
 
+
 const removeAllActiveBtn = ()=>{
     const allActiveBtn = document.getElementsByClassName("button-active");
     for(let btn of allActiveBtn){
@@ -79,8 +80,46 @@ const loadAllPost =async()=>{
 
 }
 
-const openDetailsModal = (data) =>{
+// Modal Open Function
+const openDetailsModal = async(petId) =>{
     
+    try{
+        const res = await fetch(`https://openapi.programming-hero.com/api/peddy/pet/${petId}`);
+        var data = await res.json();
+    }catch(err){
+        console.log("error : " + err)
+    }
+    console.log(data)
+    if(data.petData.price === null){
+        data.petData.price = "N/A"
+    }
+    if(data.petData.date_of_birth === undefined || data.petData.date_of_birth === null ){
+        data.petData.date_of_birth = "N/A"
+    }
+    const modal = document.getElementById("pet-modal");
+    const petImg = document.getElementById("modal-img");
+    petImg.src =data.petData.image;
+
+    const modalPetName =document.getElementById("modal-pet-name")
+    modalPetName.innerText =`${data.petData.pet_name}`;
+    const modalPetBreed =document.getElementById("modal-pet-breed")
+    modalPetBreed.innerText =`Breed : ${data.petData.pet_name}`;
+    const modalPetGender =document.getElementById("modal-pet-gender")
+    modalPetGender.innerText =`Gender : ${data.petData.gender}`;
+    const modalPetVaccinated =document.getElementById("modal-pet-vaccinated")
+    modalPetVaccinated.innerText =`Vaccinated : ${data.petData.vaccinated_status}`;
+    const modalPetDob =document.getElementById("modal-pet-dob")
+    modalPetDob.innerText =`Date of Birth : ${data.petData.date_of_birth}`;
+    const modalPetPrice =document.getElementById("modal-pet-price")
+    modalPetPrice.innerText =`Price : ${data.petData.price}`;
+    
+    const modalPetDetails =document.getElementById("modal-pet-details")
+    modalPetDetails.innerText =`${data.petData.pet_details}`;
+    modal.showModal();
+}
+
+const adoptModal = (id)=>{
+    const modal = 
 }
 
 // Display all post
@@ -139,7 +178,7 @@ const displayAllPost =(pets) =>{
                         
                         <div class="flex flex-row justify-between px-5 py-5">
                             <button id="btn-like" onclick="likePostUpdate('${post.image}')" class="btn "><img src="./images/Frame 1171276315.png" alt=""></button>
-                            <button class="btn text-cyan-800">Adopt</button>
+                            <button id="btn-${post.petId}" class="btn text-cyan-800" onclick="adoptModal('${post.petId}')">Adopt</button>
                             <button class="btn text-cyan-800" onclick="openDetailsModal('${post.petId}')">Details</button>
                         </div>
             `
