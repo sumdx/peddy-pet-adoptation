@@ -111,12 +111,15 @@
       <!-- Deals -->
       <div class="flex justify-between items-center">
         <p class="text-lg font-bold">Best deals for you</p>
-        <button class="btn bg-cyan-800 text-white mt-10 mb-10">
+        <button onclick="sortPost()" class="btn bg-cyan-800 text-white mt-10 mb-10">
           Sort by price
         </button>
       </div>
+      <div id="spinner" class="my-20 mx-auto w-full">
+        <span class="loading loading-bars loading-lg mx-auto"></span>
+      </div>
       <!-- Main Card container -->
-      <div id="shop-div" class="flex gap-4">
+      <div id="shop-div" class="flex gap-4 hidden">
         <!-- left card container -->
         <div
           id="post-container"
@@ -127,7 +130,7 @@
           <div id="like-container" class="grid grid-cols-2 gap-2"></div>
         </div>
       </div>
-      <!-- modal Section -->
+      <!-- Details modal Section -->
       <section id="modal">
         <dialog id="pet-modal" class="modal">
           <div class="modal-box w-11/12 max-w-5xl">
@@ -148,22 +151,30 @@
                   </div>
                   <div class="flex flex-row gap-2 my-3">
                     <img src="./images/Frame (3).png" alt="" />
-                    <p id="modal-pet-gender" class="text-gray-500">Gender : ${post.gender}</p>
+                    <p id="modal-pet-gender" class="text-gray-500">
+                      Gender : ${post.gender}
+                    </p>
                   </div>
                   <div class="flex flex-row gap-2 my-3">
                     <img src="./images/Frame (3).png" alt="" />
-                    <p id="modal-pet-vaccinated" class="text-gray-500">Vaccinated : ${post.gender}</p>
+                    <p id="modal-pet-vaccinated" class="text-gray-500">
+                      Vaccinated : ${post.gender}
+                    </p>
                   </div>
                 </div>
                 <div>
                   <div class="flex flex-row gap-2 my-3">
                     <img src="./images/date.png" alt="" />
-                    <p id="modal-pet-dob" class="text-gray-500">Birth : ${post.date_of_birth}</p>
+                    <p id="modal-pet-dob" class="text-gray-500">
+                      Birth : ${post.date_of_birth}
+                    </p>
                   </div>
 
                   <div class="flex flex-row gap-2 my-3">
                     <img src="./images/price.png" alt="" />
-                    <p id="modal-pet-price" class="text-gray-500">Price : ${post.price}</p>
+                    <p id="modal-pet-price" class="text-gray-500">
+                      Price : ${post.price}
+                    </p>
                   </div>
                 </div>
               </div>
@@ -181,9 +192,26 @@
 
               <form method="dialog" class="mt-7">
                 <!-- if there is a button, it will close the modal -->
-                <button class="btn w-full border border-cyan-800 rounded-md bg-cyan-800 text-center bg-opacity-25">Close</button>
+                <button
+                  class="btn w-full border border-cyan-800 rounded-md bg-cyan-800 text-center bg-opacity-25"
+                >
+                  Close
+                </button>
               </form>
             </div>
+          </div>
+        </dialog>
+      </section>
+      <!-- Adopt Modal Section -->
+      <section>
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="adopt-modal" class="modal">
+          <div class="modal-box text-center">
+            <h3 class="text-lg font-bold">Congratulation</h3>
+            <p class="text-base">
+              Adoption process has been started for your pet
+            </p>
+            <h1 id="modal-countdown" class="mt-2 text-4xl font-bold">3</h1>
           </div>
         </dialog>
       </section>
